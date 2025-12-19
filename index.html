@@ -114,7 +114,7 @@ $('#test-form').on('submit', function(e){
   e.preventDefault();
 
   $.ajax({
-    url: 'https://script.google.com/macros/s/AKfycbwNx0yOWE5-lqbyBnbgIVWtT76gUwIi3XlcEfV5QH6ks5jy0xYaouJCpob69i7aAMvGUQ/exec',
+    url: 'https://script.google.com/macros/s/AKfycbwkyxTIPwWoFiUiVrO9McVWsYyhZkiQ_B8ED3oe3jz8gacwAnnXu_hH4dwqtEAG0KXUmA/exec',
     method: 'POST',
     data: $(this).serialize(),
     success: function(){
@@ -122,7 +122,7 @@ $('#test-form').on('submit', function(e){
       $('#test-form')[0].reset();
     },
     error: function(){
-      alert('Lỗi gửi dữ liệu!');
+      alert('Lỗi gửi dữ liệu');
     }
   });
 });
@@ -130,6 +130,7 @@ $('#test-form').on('submit', function(e){
 
 </body>
 </html>
+
 
 
 
