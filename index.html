@@ -64,30 +64,30 @@
 
 <p><strong>Loại hàng</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI HÀNG" value="Thành phẩm"> Thành phẩm
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Thành phẩm"> Thành phẩm
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI HÀNG" value="Nguyên vật liệu"> Nguyên vật liệu
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Nguyên vật liệu"> Nguyên vật liệu
 </label>
 
 <hr>
 
 <p><strong>Loại yêu cầu</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI YÊU CẦU" value="Xuất kho"> Xuất kho
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Xuất kho"> Xuất kho
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI YÊU CẦU" value="Nhập kho"> Nhập kho
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Nhập kho"> Nhập kho
 </label>
 
 <hr>
 
 <p><strong>Nhân lực</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="NHÂN LỰC" value="Bốc xếp ngoài"> Bốc xếp ngoài
+  <input type="checkbox" name="NHÂN LỰC[]" value="Bốc xếp ngoài"> Bốc xếp ngoài
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="NHÂN LỰC" value="Tự bốc"> Tự bốc
+  <input type="checkbox" name="NHÂN LỰC[]" value="Tự bốc"> Tự bốc
 </label>
 
 <hr>
@@ -114,7 +114,7 @@ $('#test-form').on('submit', function(e){
   e.preventDefault();
 
   $.ajax({
-    url: 'https://script.google.com/macros/s/AKfycby9Zd-8c6yMhJeahq3akfL6zxkvDnvYjg2dPcwznHjZAMbDdyjTQHQVRjxvaJ8O4LS05A/exec',
+    url: 'https://script.google.com/macros/s/AKfycbyNfMlCkkE5X-RR-i2-MFRHuB8w86xo6JeBaJyP9KB-ioTzuI03JsQG0F1wQC1VY41Z9g/exec',
     method: 'POST',
     data: $(this).serialize(),
     success: function(){
@@ -130,15 +130,4 @@ $('#test-form').on('submit', function(e){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
