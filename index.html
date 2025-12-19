@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>RAPIDO ASIA</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<section class="hero is-primary is-bold">
+  <div class="hero-body has-text-centered" style="padding:10px">
+    <h1 class="title is-4">
+      LEADTIME INBOUND - OUTBOUND WAREHOUSE RAPIDO ASIA
+    </h1>
+  </div>
+</section>
+
+<div class="container mt-4 box">
+
+<form id="test-form">
+
+<table class="table is-fullwidth">
+<tr>
+  <td>Biển số xe</td>
+  <td><input class="input" type="text" name="BIỂN SỐ XE" required></td>
+</tr>
+
+<tr>
+  <td>Bắt đầu chuẩn bị hàng</td>
+  <td><input class="input" type="time" name="BẮT ĐẦU CHUẨN BỊ HÀNG"></td>
+</tr>
+
+<tr>
+  <td>Kết thúc chuẩn bị hàng</td>
+  <td><input class="input" type="time" name="KẾT THÚC CHUẨN BỊ HÀNG"></td>
+</tr>
+
+<tr>
+  <td>Bắt đầu quét hàng</td>
+  <td><input class="input" type="time" name="BẮT ĐẦU QUÉT HÀNG"></td>
+</tr>
+
+<tr>
+  <td>Kết thúc quét hàng</td>
+  <td><input class="input" type="time" name="KẾT THÚC QUÉT HÀNG"></td>
+</tr>
+
+<tr>
+  <td>Bắt đầu lên hàng</td>
+  <td><input class="input" type="time" name="BẮT ĐẦU LÊN HÀNG"></td>
+</tr>
+
+<tr>
+  <td>Kết thúc lên hàng</td>
+  <td><input class="input" type="time" name="KẾT THÚC LÊN HÀNG"></td>
+</tr>
+</table>
+
+<hr>
+
+<p><strong>Loại hàng</strong></p>
+<label class="checkbox">
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Thành phẩm"> Thành phẩm
+</label><br>
+<label class="checkbox">
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Nguyên vật liệu"> Nguyên vật liệu
+</label>
+
+<hr>
+
+<p><strong>Loại yêu cầu</strong></p>
+<label class="checkbox">
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Xuất kho"> Xuất kho
+</label><br>
+<label class="checkbox">
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Nhập kho"> Nhập kho
+</label>
+
+<hr>
+
+<p><strong>Nhân lực</strong></p>
+<label class="checkbox">
+  <input type="checkbox" name="NHÂN LỰC[]" value="Bốc xếp ngoài"> Bốc xếp ngoài
+</label><br>
+<label class="checkbox">
+  <input type="checkbox" name="NHÂN LỰC[]" value="Tự bốc"> Tự bốc
+</label>
+
+<hr>
+
+<label>Thời gian xe ra cổng</label>
+<input class="input" type="time" name="THỜI GIAN RA CỔNG">
+
+<hr>
+
+<label>Ghi chú</label>
+<input class="input" type="text" name="GHI CHÚ">
+
+<br><br>
+
+<button class="button is-primary is-fullwidth" type="submit">
+  GỬI FORM
+</button>
+
+</form>
+</div>
+
+<script>
+$('#test-form').on('submit', function(e){
+  e.preventDefault();
+
+  $.ajax({
+    url: 'https://script.google.com/macros/s/AKfycbwkyxTIPwWoFiUiVrO9McVWsYyhZkiQ_B8ED3oe3jz8gacwAnnXu_hH4dwqtEAG0KXUmA/exec',
+    method: 'POST',
+    data: $(this).serialize(),
+    success: function(){
+      alert('Gửi dữ liệu thành công');
+      $('#test-form')[0].reset();
+    },
+    error: function(){
+      alert('Lỗi gửi dữ liệu');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
