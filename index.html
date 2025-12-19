@@ -51,7 +51,7 @@
 
 <tr>
   <td>Bắt đầu lên hàng</td>
-  <td><input class="input" type="time" name="BẮU ĐẦU LÊN HÀNG"></td>
+  <td><input class="input" type="time" name="BẮT ĐẦU LÊN HÀNG"></td>
 </tr>
 
 <tr>
@@ -64,30 +64,30 @@
 
 <p><strong>Loại hàng</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI HÀNG" value="Thành phẩm"> Thành phẩm
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Thành phẩm"> Thành phẩm
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI HÀNG" value="Nguyên vật liệu"> Nguyên vật liệu
+  <input type="checkbox" name="LOẠI HÀNG[]" value="Nguyên vật liệu"> Nguyên vật liệu
 </label>
 
 <hr>
 
 <p><strong>Loại yêu cầu</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI YÊU CẦU" value="Xuất kho"> Xuất kho
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Xuất kho"> Xuất kho
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="LOẠI YÊU CẦU" value="Nhập kho"> Nhập kho
+  <input type="checkbox" name="LOẠI YÊU CẦU[]" value="Nhập kho"> Nhập kho
 </label>
 
 <hr>
 
 <p><strong>Nhân lực</strong></p>
 <label class="checkbox">
-  <input type="checkbox" name="NHÂN LỰC" value="Bốc xếp ngoài"> Bốc xếp ngoài
+  <input type="checkbox" name="NHÂN LỰC[]" value="Bốc xếp ngoài"> Bốc xếp ngoài
 </label><br>
 <label class="checkbox">
-  <input type="checkbox" name="NHÂN LỰC" value="Tự bốc"> Tự bốc
+  <input type="checkbox" name="NHÂN LỰC[]" value="Tự bốc"> Tự bốc
 </label>
 
 <hr>
@@ -114,7 +114,7 @@ $('#test-form').on('submit', function(e){
   e.preventDefault();
 
   $.ajax({
-    url: 'https://script.google.com/macros/s/AKfycbxfxPjRUQr3vocJa6ztu5r7vayviQhEnhin_1VQyu_5Y8wb5k0Z3SAa9bZX9Zi-jj28mA/exec',
+    url: 'https://script.google.com/macros/s/AKfycbwtMQSvUdUYsV5AKyPQ8YAFvLHNcgPdUszp4DiyxRBOcARjN1xPPn7hZeo9_IDrQ0dvfg/exec',
     method: 'POST',
     data: $(this).serialize(),
     success: function(){
@@ -127,9 +127,10 @@ $('#test-form').on('submit', function(e){
   });
 });
 </script>
-  
+
 </body>
 </html>
+
 
 
 
